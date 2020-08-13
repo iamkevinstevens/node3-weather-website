@@ -12,7 +12,6 @@ const forecast = (latitude, longitude, callback) => {
             callback('Location is invalid. Please check lat/long', undefined)
         }
         else {
-            console.log(body)
             callback(undefined, body.current.weather_descriptions + '. It is currently ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out. Wind speed is ' + body.current.wind_speed + '. Observation time is ' + body.current.observation_time)
         }
     })
